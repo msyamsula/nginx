@@ -22,7 +22,7 @@ NOTES
 5. create file in directory /lib/systemd/system/nginx.service, copy and paste what happen in init script "systemd" section
 6. change PIDfile path to match configuration in installation step 10
 7. change sbin path to match configuration in installation step 10
-8. serveral important context is 
+8. several important context is 
     a. http, http related
     b. server, define our host
     c. location, to intercept and redirect certain url call
@@ -34,10 +34,10 @@ NOTES
     d. prefix
 11. there is concept of redirect and rewrite
 12. redirect is about changing url when certain url is called, it is happening in location block
-13. rewrite is about change url that is comes to nginx, it also happen in location block
-14. when redirecting to a file you need to return 307 in nginx (it is the standar)
-15. rewrite changes without user knowing, it change before the call
-16. redirect changes can be known by user, it change after the call
+13. rewrite is about renaming url that is comes to nginx, it can happen before location block
+14. when redirecting to a file you need to return 307 in nginx (it is the standar) and 301 for redirecting
+15. rewrite change url, without user knowing, it change before the call
+16. redirect change url and can be known by user, it change after the call
 17. try_files concept, for more comprehensive explanation see "tutorial.basic.conf" in TRY_FILES section
 18. nginx worker concept. it is a process that handle our request in nginx
 19. adding nginx worker doesn't directly mean it enhance the performance, hardware limitation plays a role in this one
